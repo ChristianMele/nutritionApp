@@ -17,9 +17,14 @@ public class Handler {
         JSONObject foodObj = (JSONObject) jarray.get(0);
         JSONObject foodArray = (JSONObject) foodObj.get("food");
         JSONObject nutObj = (JSONObject) foodArray.get("nutrients");
+        try {
         double strNum = (double) nutObj.get("ENERC_KCAL");
         String out = String.valueOf(strNum);
         return out;
+        } catch (Exception e){
+            String out = "0";
+            return out;
+        }
     }
 
     public String getFat(String str) throws JSONException {
@@ -27,9 +32,14 @@ public class Handler {
         JSONObject foodObj = (JSONObject) jarray.get(0);
         JSONObject foodArray = (JSONObject) foodObj.get("food");
         JSONObject nutObj = (JSONObject) foodArray.get("nutrients");
+        try {
         double strNum = (double) nutObj.get("FAT");
         String out = String.valueOf(strNum);
         return out;
+        } catch (Exception e){
+            String out = "0";
+            return out;
+        }
     }
 
     public String getPro(String str) throws JSONException {
@@ -37,9 +47,14 @@ public class Handler {
         JSONObject foodObj = (JSONObject) jarray.get(0);
         JSONObject foodArray = (JSONObject) foodObj.get("food");
         JSONObject nutObj = (JSONObject) foodArray.get("nutrients");
+        try {
         double strNum = (double) nutObj.get("PROCNT");
         String out = String.valueOf(strNum);
         return out;
+        } catch (Exception e){
+            String out = "0";
+            return out;
+        }
     }
 
     public String getCarb(String str) throws JSONException {
@@ -47,9 +62,14 @@ public class Handler {
         JSONObject foodObj = (JSONObject) jarray.get(0);
         JSONObject foodArray = (JSONObject) foodObj.get("food");
         JSONObject nutObj = (JSONObject) foodArray.get("nutrients");
+        try {
         double strNum = (double) nutObj.get("CHOCDF");
         String out = String.valueOf(strNum);
         return out;
+        } catch (Exception e){
+            String out = "0";
+            return out;
+        }
     }
 
     public String getFoodName(String nameStr) throws JSONException {
